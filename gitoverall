@@ -1,0 +1,194 @@
+"""
+User@DESKTOP-P80G2BV MINGW64 ~ (master)
+$ cd Desktop
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop (master)
+$ cd kora
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ ls
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git init
+Initialized empty Git repository in C:/Users/User/Desktop/kora/.git/
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git config --global user.name 'DawitF'
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git config --global user.email 'sole@gmail.com'
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ ls
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ ls
+main.c
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git add .
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git commit -m 'firstcommit'
+[master (root-commit) 2d4f902] firstcommit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 main.c
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git add .
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git commit -m 'add multyplication'
+[master 1589f4c] add multyplication
+ 1 file changed, 5 insertions(+)
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ gcc main.c
+bash: gcc: command not found
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ ls
+main.c
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git log
+commit 1589f4c4ac0d7f5c924fe16146fd4d46a9a4efab (HEAD -> master)
+Author: DawitF <sole@gmail.com>
+Date:   Tue Dec 5 10:14:19 2023 -0500
+
+    add multyplication
+
+commit 2d4f9025eb7c769531ed63c0e8ef12287982cfb2
+Author: DawitF <sole@gmail.com>
+Date:   Tue Dec 5 10:07:54 2023 -0500
+
+    firstcommit
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git branch
+* master
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git branch newkora
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git branch
+* master
+  newkora
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git checkout newkora
+Switched to branch 'newkora'
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git branch
+  master
+* newkora
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git status
+On branch newkora
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        makefile
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git add .
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git commit -m 'new branch'
+[newkora bed4262] new branch
+ 1 file changed, 3 insertions(+)
+ create mode 100644 makefile
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git branch
+  master
+* newkora
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git checkout master
+Switched to branch 'master'
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git checkout newkora
+Switched to branch 'newkora'
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (newkora)
+$ git checkout master
+Switched to branch 'master'
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git merge newkora
+Updating 1589f4c..bed4262
+Fast-forward
+ makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 makefile
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ ls
+main.c  makefile
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git branch -d newkora
+Deleted branch newkora (was bed4262).
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git branch
+* master
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git remote add origin https://github.com/ethioeagle/bycommunity.git
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (9/9), 749 bytes | 749.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ethioeagle/bycommunity.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+User@DESKTOP-P80G2BV MINGW64 ~/Desktop/kora (master)
+$
+
+
+"""
